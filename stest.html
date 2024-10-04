@@ -1,0 +1,84 @@
+<style><!--
+    #customizUL {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            color: #676767;
+          }
+    
+          .customizUL_caret {
+            cursor: pointer;
+            user-select: none;
+          }
+    
+          .customizUL_caret::before {
+            content: "\25B6";
+            color: black;
+            display: inline-block;
+            margin-right: 6px;
+            color: #676767;
+            transform: rotate(0deg);
+          }
+    
+          .customizUL_caret-down::before {
+            transform: rotate(90deg);
+          }
+    
+          .customizUL_nested {
+            list-style-type: none;
+            display: block;
+            padding-left: 5px;
+          }
+    
+          .customizUL_active {
+            display: none;
+          }
+    --></style>
+    <ul id="customizUL">
+      <li><span class="">表單申請管理系統</span>
+        <ul class="customizUL_nested">
+          <li><span class="customizUL_caret">資源申請管理系統</span>
+            <ul class="customizUL_nested">
+              <li>✦<a href="https://kevinapog.101eip.net/index.php?menuaction=formsflow.uiformsflow.create_formsflow&amp;direct_add=1&amp;formstyle_v_id=471">Internet網站存取申請單</a></li>
+              <li>✦<a href="https://kevinapog.101eip.net/index.php?menuaction=formsflow.uiformsflow.create_formsflow&amp;direct_add=1&amp;formstyle_v_id=472">Internet網站存取申請單查詢</a></li>
+            </ul>
+          </li>
+          <li><span class="customizUL_caret">需求管理系統</span>
+            <ul class="customizUL_nested">
+              <li>✦<a href="https://kevinapog.101eip.net/index.php?menuaction=formsflow.uiformsflow.create_formsflow&amp;direct_add=1&amp;formstyle_v_id=370">需求單</a></li>
+              <li>✦<a href="https://kevinapog.101eip.net/index.php?menuaction=formsflow.uiformsflow.create_formsflow&amp;direct_add=1&amp;formstyle_v_id=395">需求單查詢</a></li>
+              <li>✦<a href="https://kevinapog.101eip.net/index.php?menuaction=formsflow.uiformsflow.create_formsflow&amp;direct_add=1&amp;formstyle_v_id=385">需求確認單</a></li>
+              <li>✦<a href="https://kevinapog.101eip.net/index.php?menuaction=formsflow.uiformsflow.create_formsflow&amp;direct_add=1&amp;formstyle_v_id=386">需求確認單查詢</a></li>
+            </ul>
+          </li>
+          <li><span class="customizUL_caret">問題事件管理系統</span>
+            <ul class="customizUL_nested">
+              <li>✦<a href="https://kevinapog.101eip.net/index.php?menuaction=formsflow.uiformsflow.create_formsflow&amp;direct_add=1&amp;formstyle_v_id=370">問題單</a></li>
+              <li>✦<a href="https://kevinapog.101eip.net/index.php?menuaction=formsflow.uiformsflow.create_formsflow&amp;direct_add=1&amp;formstyle_v_id=395">問題單查詢</a></li>
+              <li>✦<a href="https://kevinapog.101eip.net/index.php?menuaction=formsflow.uiformsflow.create_formsflow&amp;direct_add=1&amp;formstyle_v_id=385">事件單</a></li>
+              <li>✦<a href="https://kevinapog.101eip.net/index.php?menuaction=formsflow.uiformsflow.create_formsflow&amp;direct_add=1&amp;formstyle_v_id=386">事件單查詢</a></li>
+            </ul>
+          </li>
+          <li><span class="customizUL_caret">物品管理系統</span>
+            <ul class="customizUL_nested">
+              <li>✦<a href="https://kevinapog.101eip.net/index.php?menuaction=formsflow.uiformsflow.create_formsflow&amp;direct_add=1&amp;formstyle_v_id=370">電腦機房攜出入申請單</a></li>
+              <li>✦<a href="https://kevinapog.101eip.net/index.php?menuaction=formsflow.uiformsflow.create_formsflow&amp;direct_add=1&amp;formstyle_v_id=395">電腦機房攜出入申請單查詢</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <script>
+    var toggler = document.getElementsByClassName("customizUL_caret");
+      var i;
+    
+      for (i = 0; i < toggler.length; i++) {
+        // 將原始代碼中的classList.toggle改為classList.add
+        toggler[i].addEventListener("click", function () {
+          this.parentElement.querySelector(".customizUL_nested").classList.toggle("customizUL_active");
+          this.classList.toggle("customizUL_caret-down");
+        });
+        // 新增的代碼，將預設狀態設置為收縮
+        toggler[i].parentElement.querySelector(".customizUL_nested").classList.add("customizUL_active");
+      }
+    </script>
